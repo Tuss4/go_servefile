@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Playing with Sockets</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript">
+        if (window["WebSocket"]) {
+            console.log("WebSockets are supported");
+        } else {
+            console.log("WebSockets are not supported");
+        }
+        var socket = new WebSocket('ws://localhost:8080/ws');
+        </script>
+    </head>
+    <body>
+        <p>This is a test page.</p>
+    </body>
+</html>
