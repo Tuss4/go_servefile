@@ -11,7 +11,6 @@ var file_location = "/home/tj/Documents/GO_DIR/src/github.com/tuss4/go_servefile
 
 func serveIndex(w http.ResponseWriter, req *http.Request) {
 	req.Header.Add("Origin", req.Host)
-	log.Println(req.Host)
 	if req.Method == "GET" {
 		http.ServeFile(w, req, file_location)
 	}

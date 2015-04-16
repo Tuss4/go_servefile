@@ -10,7 +10,13 @@
         } else {
             console.log("WebSockets are not supported");
         }
-        var socket = new WebSocket('ws://echo.websocket.org');
+        // var socket = new WebSocket('ws://echo.websocket.org');
+        var socket = new WebSocket('ws://localhost:8080/ws');
+        socket.onclose = function(evt) {
+            if (!evt.wasClean) {
+                console.log("WebSocket Error: " + evt.reason);
+            }
+        };
         </script>
     </head>
     <body>
