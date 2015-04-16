@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-var addr = flag.String("addr", ":5050", "http server port")
+var addr = flag.String("addr", ":5050", "http tcp address")
 var file_location = "/home/tj/Documents/GO_DIR/src/github.com/tuss4/go_servefile/index.html"
 
 func serveIndex(w http.ResponseWriter, req *http.Request) {
